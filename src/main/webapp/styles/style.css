@@ -1,0 +1,71 @@
+body {
+    font-family: 'Shadows Into Light', cursive;
+    background-color: #ebebeb;
+    background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+#blue {
+    color: blue;
+}
+#red {
+    color: red;
+}
+#green {
+    color: green;
+}
+#yellow {
+    color: yellow;
+}
+
+header > h1 {
+    text-align: center;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.fa-circle {
+    margin: auto 3px auto 3px;
+}
+
+header {
+    width: 50%;
+    font-size: 40px;
+    height: 150px;
+    display: flex;
+    padding-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+#menu {
+    -webkit-box-shadow: inset 0px 0px 58px -29px rgba(0, 0, 6, 1);
+    -moz-box-shadow: inset 0px 0px 58px -29px rgba(0, 0, 6, 1);
+    box-shadow: inset 0px 0px 58px -29px rgba(0, 0, 6, 1);
+    width: 50%;
+    border: 1px solid black;
+    margin: auto;
+    text-align: center;
+    height: 350px;
+}
+
+#menu > h3 {
+    margin-bottom: 60px;
+}
+
+input[type=submit] {
+    font-size: 20px;
+    width: 150px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+input[type=submit]:focus, input[type=submit]:hover {
+    background-color: #212121;
+    color: #dedede;
+    -webkit-box-shadow: 0px 0px 63px -5px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 0px 63px -5px rgba(66, 68, 90, 1);
+    box-shadow: 0px 0px 63px -5px rgba(66, 68, 90, 1);
+}
