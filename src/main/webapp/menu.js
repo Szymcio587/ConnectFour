@@ -1,10 +1,4 @@
-function LogInButton() {
-    let button = document.getElementById("log-in");
-}
-
-function RegisterButton() {
-    let button = document.getElementById("register");
-}
-
-LogInButton();
-RegisterButton();
+let button = document.getElementById("log-in");
+button.onclick = function() {location.href="login.jsp";}
+let button = document.getElementById("register");
+button.onclick = function() {location.href="register.jsp";}

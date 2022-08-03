@@ -2,7 +2,6 @@ body {
     font-family: 'Shadows Into Light', cursive;
     background-color: #ebebeb;
     background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
-    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 #blue {
@@ -39,7 +38,7 @@ header {
     justify-content: center;
 }
 
-#menu {
+.menu {
     -webkit-box-shadow: inset 0px 0px 58px -29px rgba(0, 0, 6, 1);
     -moz-box-shadow: inset 0px 0px 58px -29px rgba(0, 0, 6, 1);
     box-shadow: inset 0px 0px 58px -29px rgba(0, 0, 6, 1);
@@ -50,22 +49,34 @@ header {
     height: 350px;
 }
 
-#menu > h3 {
+.menu > h3 {
     margin-bottom: 60px;
 }
 
-input[type=submit] {
+input[type=button], input[type=submit] {
     font-size: 20px;
     width: 150px;
     margin-top: 20px;
     margin-bottom: 20px;
+    border: 1px solid #212121;
+    border-radius: 3px;
     font-family: 'Shadows Into Light', cursive;
 }
 
-input[type=submit]:focus, input[type=submit]:hover {
+input[type=button]:hover, input[type=submit]:hover {
     background-color: #212121;
+    border: 1px solid #dedede;
+    border-radius: 3px;
     color: #dedede;
-    -webkit-box-shadow: 0px 0px 63px -5px rgba(66, 68, 90, 1);
-    -moz-box-shadow: 0px 0px 63px -5px rgba(66, 68, 90, 1);
-    box-shadow: 0px 0px 63px -5px rgba(66, 68, 90, 1);
+}
+
+input[type=text], input[type=password] {
+    font-size: 15px;
+    width: 150px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Shadows Into Light', cursive;
+    border: 1px solid #212121;
+    border-radius: 5px;
+    text-align: center;
 }

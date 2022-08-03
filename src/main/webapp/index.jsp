@@ -2,28 +2,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSP - Hello World</title>
+    <title>Strona główna</title>
     <script src="https://kit.fontawesome.com/8868c41994.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/style.css" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <script> src="menu.js"</script>
 </head>
 <body>
-    <header>
-        <i class="fa-solid fa-circle" id="blue"></i>
-        <i class="fa-solid fa-circle" id="red"></i>
-        <i class="fa-solid fa-circle" id="green"></i>
-        <i class="fa-solid fa-circle" id="yellow"></i>
-        <h1>Connect Four</h1>
-    </header>
-
-    <div id="menu">
+    <%@include file="header.jsp" %>
+    <div class="menu">
         <h3>Welcome to my game! Choose whether you want to sign in or create a new account</h3>
-        <p><input type="submit" id="log-in" class="button" value="Log in"/></p>
-        <p><input type="submit" id="register" class="button" value="Create an account"/></p>
+        <p><input type="button" id="log-in" value="Log in"/></p>
+        <script type="text/javascript">
+            document.getElementById("log-in").onclick = function () {
+                location.href = "login.jsp";
+            };
+        </script>
+        <p><input type="button" id="register" value="Create an account"/></p>
+        <script type="text/javascript">
+            document.getElementById("register").onclick = function () {
+                location.href = "register.jsp";
+            };
+        </script>
     </div>
-
-    <script> src="menu.js"</script>
 </body>
 </html>
