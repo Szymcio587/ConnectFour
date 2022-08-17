@@ -80,3 +80,33 @@ input[type=text], input[type=password] {
     border-radius: 5px;
     text-align: center;
 }
+
+#error {
+    color: red;
+}
+
+@media only screen and (max-device-width: 480px) {
+    header {
+        font-size: 20px;
+    }
+
+    .menu > h3 {
+        margin: 5px;
+    }
+}
+
+@media only screen and (min-device-width: 480px) and (max-device-width: 768px){
+    header {
+        font-size: 26px;
+    }
+
+    .menu > h3 {
+        margin: 5px;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px){
+    header {
+        font-size: 32px;
+    }
+}

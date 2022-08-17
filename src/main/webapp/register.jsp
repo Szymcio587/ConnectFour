@@ -16,7 +16,7 @@
         <p>Repeat Password: <input type="password" name="password2"/></p>
         <p>E-mail: <input type="text" name="email"/></p>
         <p><input type="submit" value="Register"/></p>
-        <p name="error"></p>
+        <p name="error" id="error"></p>
     </form>
 </body>
 </html>
