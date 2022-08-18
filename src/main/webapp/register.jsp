@@ -2,11 +2,7 @@
 <html>
 <head>
     <title>Strona do rejestracji</title>
-    <script src="https://kit.fontawesome.com/8868c41994.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles/style.css" type="text/css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <%@include file="sheets.jsp"%>
 </head>
 <body>
     <%@include file="header.jsp"%>
@@ -18,5 +14,7 @@
         <p><input type="submit" value="Register"/></p>
         <p name="error" id="error"></p>
     </form>
+
+    <%@include file="footer.jsp"%>
 </body>
 </html>

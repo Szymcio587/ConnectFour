@@ -21,7 +21,7 @@ public class RegistrationDataFilter implements Filter {
         }
         else {
             SetErrorMessage(request);
-            request.getRequestDispatcher("register.jsp").forward(request, response);
+            request.getRequestDispatcher("/register.jsp").forward(request, response);
         }
 
     }
