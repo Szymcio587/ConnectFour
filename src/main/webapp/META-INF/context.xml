@@ -1,5 +1,6 @@
 <Context>
-    <Resource name="jdbc/readstack"
+    <Resource name="jdbc/game_data"
+              global="jdbc/game_data"
               factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
               type="javax.sql.DataSource"
               username="root"

@@ -1,29 +1,19 @@
 package com.example.demo.filters;
 
 import jakarta.servlet.*;
-import jakarta.servlet.annotation.*;
-import java.io.IOException;
 import java.util.regex.Pattern;
-
-@WebFilter("/confirm.jsp")
-public class RegistrationDataFilter implements Filter {
+public class RegistrationDataFilter{
     private String errorMessage;
-    @Override
-    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws ServletException, IOException {
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-        String password_repeated = request.getParameter("password2");
-        String email = request.getParameter("email");
+
+    public boolean Filter(String username, String password, String password_repeated, String email) {
         if(CorrectUsername(username) &&
                 CorrectPassword(password, password_repeated) &&
                 CorrectEmail(email)) {
-            chain.doFilter(request, response);
+            return true;
         }
         else {
-            SetErrorMessage(request);
-            request.getRequestDispatcher("/register.jsp").forward(request, response);
+            return false;
         }
-
     }
 
     public void SetErrorMessage(ServletRequest request) {

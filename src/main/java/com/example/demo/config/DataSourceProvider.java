@@ -14,7 +14,7 @@ public class DataSourceProvider {
         if (dataSource == null) {
             Context initContext = new InitialContext();
             Context envContext = (Context) initContext.lookup("java:comp/env/");
-            dataSource = (DataSource) envContext.lookup("jdbc/readstack");
+            dataSource = (DataSource) envContext.lookup("jdbc/game_data");
         }
         return dataSource;
     }

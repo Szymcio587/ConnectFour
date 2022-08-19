@@ -27,15 +27,11 @@ public class UserDao {
             throw new RuntimeException(e);
         }
     }
-
-    public void save(User user) {
-        saveUser(user);
-    }
-
-    private void saveUser(User user) {
-        final String query = " INSERT INTO user (username, email, password, registration_date) VALUES (?, ?, ?, ?) ";
-        try (Connection connection = getConnection();
-             PreparedStatement statement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
+    public void saveUser(User user) {
+        String query = " INSERT INTO user (username, email, password, registration_date) VALUES (?, ?, ?, ?) ";
+        try {
+            Connection connection = getConnection();
+            PreparedStatement statement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
             statement.setString(1, user.getUsername());
             statement.setString(2, user.getEmail());
             statement.setString(3, user.getPassword());
