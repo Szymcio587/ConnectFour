@@ -13,6 +13,11 @@
     margin-bottom: 60px;
 }
 
+.menu > p {
+    margin: 0px;
+    padding: 0px;
+}
+
 input[type=button], input[type=submit] {
     font-size: 20px;
     width: 150px;

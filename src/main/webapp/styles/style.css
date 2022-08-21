@@ -38,32 +38,30 @@ header {
     justify-content: center;
 }
 
+footer {
+    position: absolute;
+    font-size: 18px;
+    bottom: 20px;
+    left: 20px;
+}
+
+footer > a {
+    text-decoration: wavy;
+    color: black;
+    font-weight: bold;
+}
+
+footer > a:hover {
+    color: #bd0d0d;
+}
+
+congrats {
+    font-size: 20px;
+}
+
+#confirm {
+}
+
 #error {
     color: red;
-}
-
-@media only screen and (max-device-width: 480px) {
-    header {
-        font-size: 20px;
-    }
-
-    .menu > h3 {
-        margin: 5px;
-    }
-}
-
-@media only screen and (min-device-width: 480px) and (max-device-width: 768px){
-    header {
-        font-size: 26px;
-    }
-
-    .menu > h3 {
-        margin: 5px;
-    }
-}
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px){
-    header {
-        font-size: 32px;
-    }
 }

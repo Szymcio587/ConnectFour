@@ -10,6 +10,7 @@ public class UserService {
     public void register(UserRegistration userRegistration) {
         User userToSave = UserMapper.map(userRegistration);
         userDao.saveUser(userToSave);
+        userDao.saveUserRole(userToSave);
     }
 
     private static class UserMapper {

@@ -6,6 +6,7 @@ import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 import com.example.demo.api.UserRegistration;
 import com.example.demo.api.UserService;
+import java.util.Optional;
 
 import java.io.IOException;
 
@@ -21,17 +22,27 @@ public class SignUpServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        UserRegistration userRegistration = getUserData(request);
-        userService.register(userRegistration);
-        response.sendRedirect(request.getContextPath() + "/confirm.jsp");
+        Optional<UserRegistration> userRegistration = getUserData(request);
+        if(userRegistration.isPresent()) {
+            userService.register(userRegistration.get());
+            request.getRequestDispatcher("/jd.jsp").forward(request, response);
+        }
+        else {
+            String errorMessage = filter.getErrorMessage();
+            request.setAttribute("error", errorMessage);
+            request.getRequestDispatcher("/register.jsp").forward(request, response);
+        }
     }
 
-    private UserRegistration getUserData(HttpServletRequest request) {
+    private Optional<UserRegistration> getUserData(HttpServletRequest request) {
         String username = request.getParameter("username");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         String passwordRepeated = request.getParameter("password2");
         boolean isLegit = filter.Filter(username, password, passwordRepeated, email);
-        return new UserRegistration(username, email, password, passwordRepeated);
+        if(isLegit)
+            return Optional.of(new UserRegistration(username, password, passwordRepeated, email));
+        else
+            return Optional.empty();
     }
 }

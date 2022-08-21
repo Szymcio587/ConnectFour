@@ -14,7 +14,7 @@
           <element id="module-output" name="demo" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.29" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.22" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter:2.7.1" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot:2.7.1" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context:5.3.21" />

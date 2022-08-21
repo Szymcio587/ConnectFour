@@ -1,6 +1,5 @@
 package com.example.demo.filters;
 
-import jakarta.servlet.*;
 import java.util.regex.Pattern;
 public class RegistrationDataFilter{
     private String errorMessage;
@@ -14,10 +13,6 @@ public class RegistrationDataFilter{
         else {
             return false;
         }
-    }
-
-    public void SetErrorMessage(ServletRequest request) {
-        request.setAttribute("error", errorMessage);
     }
 
     public boolean CorrectUsername(String username) {
@@ -53,5 +48,13 @@ public class RegistrationDataFilter{
             errorMessage += "Provided email is not correct.";
             return false;
         }
+    }
+
+    public String getErrorMessage() {
+        return errorMessage;
+    }
+
+    public void setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
     }
 }

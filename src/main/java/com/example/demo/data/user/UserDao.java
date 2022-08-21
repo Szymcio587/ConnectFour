@@ -33,14 +33,26 @@ public class UserDao {
             Connection connection = getConnection();
             PreparedStatement statement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
             statement.setString(1, user.getUsername());
-            statement.setString(2, user.getEmail());
             statement.setString(3, user.getPassword());
+            statement.setString(2, user.getEmail());
             statement.setObject(4, user.getRegistrationDate());
             statement.executeUpdate();
             ResultSet generatedKeys = statement.getGeneratedKeys();
             if (generatedKeys.next()) {
                 user.setId(generatedKeys.getInt(1));
             }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void saveUserRole(User user) {
+        String query = "INSERT INTO user_role (username) VALUES (?)";
+        try {
+            Connection connection = getConnection();
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setString(1, user.getUsername());
+            statement.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

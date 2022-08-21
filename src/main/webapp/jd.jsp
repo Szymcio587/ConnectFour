@@ -8,8 +8,8 @@
 <%@include file="header.jsp"%>
 <div class="menu">
     <h3>Registration succeded!</h3>
-    <p id="congrats">Click button below to log in to your new account</p>
-    <input type="button" id="confirm" value="Log in"/></div></br>
+    Click button below to log in to your new account
+    <input type="button" id="log-in" value="Log in"/>
     <script>
         document.getElementById("log-in").onclick = function () {
             location.href = "login.jsp";
