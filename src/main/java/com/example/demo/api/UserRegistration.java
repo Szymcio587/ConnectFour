@@ -4,13 +4,16 @@ public class UserRegistration {
 
     private String username, password, passwordRepeated, email;
 
-    public UserRegistration() {}
-
     public UserRegistration(String username, String password, String passwordRepeated, String email) {
         this.username = username;
         this.password = password;
         this.passwordRepeated = passwordRepeated;
         this.email = email;
+    }
+
+    public UserRegistration(String username, String password) {
+        this.username = username;
+        this.password = password;
     }
 
     public String getUsername() {

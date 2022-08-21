@@ -25,7 +25,7 @@ public class SignUpServlet extends HttpServlet {
         Optional<UserRegistration> userRegistration = getUserData(request);
         if(userRegistration.isPresent()) {
             userService.register(userRegistration.get());
-            request.getRequestDispatcher("/jd.jsp").forward(request, response);
+            request.getRequestDispatcher("/confirm2.jsp").forward(request, response);
         }
         else {
             String errorMessage = filter.getErrorMessage();

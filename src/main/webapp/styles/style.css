@@ -59,7 +59,8 @@ congrats {
     font-size: 20px;
 }
 
-#confirm {
+#login-top {
+    margin-top: 80px;
 }
 
 #error {

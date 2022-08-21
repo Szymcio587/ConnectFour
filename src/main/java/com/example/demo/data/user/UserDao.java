@@ -57,4 +57,18 @@ public class UserDao {
             throw new RuntimeException(e);
         }
     }
+
+    public boolean checkUser(User user) {
+        String query = String.format("SELECT COUNT(*) AS 'result' FROM user WHERE username = '%s' AND password = '%s'", user.getUsername(), user.getPassword());
+        try {
+            Connection connection = getConnection();
+            PreparedStatement statement = connection.prepareStatement(query);
+            ResultSet resultSet = statement.executeQuery(query);
+            resultSet.next();
+            int result = resultSet.getInt("result");
+            return result > 0;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

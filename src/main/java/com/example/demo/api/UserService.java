@@ -13,6 +13,11 @@ public class UserService {
         userDao.saveUserRole(userToSave);
     }
 
+    public boolean login(UserRegistration userRegistration) {
+        User userToCheck = UserMapper.map(userRegistration);
+        return userDao.checkUser(userToCheck);
+    }
+
     private static class UserMapper {
         static User map(UserRegistration userRegistration) {
             return new User(
