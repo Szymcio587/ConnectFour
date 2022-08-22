@@ -1,0 +1,38 @@
+#user-info {
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    font-size: 15px;
+    text-align: center;
+}
+
+#user-info > p {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+#user-info > a {
+    text-decoration: wavy;
+    color: black;
+}
+
+#user-info > a:hover {
+    color: #bd0d0d;
+}
+
+#game-menu {
+    margin: auto;
+    text-align: center;
+    height: 400px;
+}
+
+#game-menu > p {
+    margin: 20px;
+}
+
+input[type=button]{
+    font-size: 24px;
+    width: 200px;
+}

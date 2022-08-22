@@ -54,15 +54,3 @@ footer > a {
 footer > a:hover {
     color: #bd0d0d;
 }
-
-congrats {
-    font-size: 20px;
-}
-
-#login-top {
-    margin-top: 80px;
-}
-
-#error {
-    color: red;
-}

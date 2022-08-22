@@ -45,3 +45,16 @@ input[type=text], input[type=password] {
     border-radius: 5px;
     text-align: center;
 }
+
+congrats {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+#login-top {
+    margin-top: 80px;
+}
+
+#register-top {
+    margin-top: 50px;
+}

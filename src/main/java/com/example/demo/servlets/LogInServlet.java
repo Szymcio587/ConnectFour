@@ -23,8 +23,10 @@ public class LogInServlet extends HttpServlet {
         String password = request.getParameter("password");
         UserRegistration userRegistration = new UserRegistration(username, password);
         boolean toLogin = userService.login(userRegistration);
-        if(toLogin)
+        if(toLogin) {
+            request.setAttribute("username", username);
             request.getRequestDispatcher("/menu2.jsp").forward(request, response);
+        }
         else
             request.getRequestDispatcher("/login.jsp").forward(request, response);
     }

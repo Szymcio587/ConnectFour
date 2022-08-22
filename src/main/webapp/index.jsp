@@ -3,10 +3,10 @@
 <html>
 <head>
     <title>Strona główna</title>
-    <%@include file="sheets.jsp"%>
+    <%@include file="segments/sheets.jsp"%>
 </head>
 <body>
-    <%@include file="header.jsp" %>
+    <%@include file="segments/header.jsp" %>
     <div class="menu">
         <h3>Welcome to my game! Choose whether you want to sign in or create a new account</h3>
         <p><input type="button" id="log-in" value="Log in"/></p>
@@ -23,6 +23,6 @@
         </script>
     </div>
 
-    <%@include file="footer.jsp"%>
+    <%@include file="segments/footer.jsp"%>
 </body>
 </html>
