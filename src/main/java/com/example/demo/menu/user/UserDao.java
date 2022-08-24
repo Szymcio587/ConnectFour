@@ -1,6 +1,6 @@
-package com.example.demo.data.user;
+package com.example.demo.menu.user;
 
-import com.example.demo.config.DataSourceProvider;
+import com.example.demo.menu.config.DataSourceProvider;
 
 import java.sql.*;
 import javax.naming.NamingException;

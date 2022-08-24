@@ -1,11 +1,11 @@
-package com.example.demo.servlets;
+package com.example.demo.menu.servlets;
 
-import com.example.demo.filters.RegistrationDataFilter;
+import com.example.demo.menu.filters.RegistrationDataFilter;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
-import com.example.demo.api.UserRegistration;
-import com.example.demo.api.UserService;
+import com.example.demo.menu.api.UserRegistration;
+import com.example.demo.menu.api.UserService;
 import java.util.Optional;
 
 import java.io.IOException;

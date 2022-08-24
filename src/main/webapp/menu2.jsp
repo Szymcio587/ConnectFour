@@ -19,12 +19,5 @@
         <p><input type="button" class="game" id="join" value="Join the game!"/></p>
     </div>
 <%@include file="segments/footer.jsp"%>
-<script>
-    let ws = new WebSocket("localhost:8080/application/menu2.jsp");
-    ws.onmessage = message => {
-        const response = JSON.parse(message.data);
-        console.log(response);
-    }
-</script>
 </body>
 </html>

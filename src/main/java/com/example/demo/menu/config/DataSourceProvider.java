@@ -1,14 +1,15 @@
-package com.example.demo.config;
+package com.example.demo.menu.config;
+
+import lombok.NoArgsConstructor;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
+@NoArgsConstructor
 public class DataSourceProvider {
     private static DataSource dataSource;
-
-    private DataSourceProvider() { }
 
     public static DataSource getDataSource() throws NamingException {
         if (dataSource == null) {

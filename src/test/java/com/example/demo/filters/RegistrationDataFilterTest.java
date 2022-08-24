@@ -1,5 +1,6 @@
 package com.example.demo.filters;
 
+import com.example.demo.menu.filters.RegistrationDataFilter;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

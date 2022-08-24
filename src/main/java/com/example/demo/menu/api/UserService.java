@@ -1,7 +1,8 @@
-package com.example.demo.api;
+package com.example.demo.menu.api;
 
-import com.example.demo.data.user.User;
-import com.example.demo.data.user.UserDao;
+import com.example.demo.menu.user.User;
+import com.example.demo.menu.user.UserDao;
+
 import java.time.LocalDateTime;
 
 public class UserService {

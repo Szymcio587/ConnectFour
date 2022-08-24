@@ -1,4 +1,4 @@
-package com.example.demo.filters;
+package com.example.demo.menu.filters;
 
 import java.util.regex.Pattern;
 public class RegistrationDataFilter{
