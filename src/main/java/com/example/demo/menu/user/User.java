@@ -1,15 +1,9 @@
 package com.example.demo.menu.user;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
-
+import lombok.*;
 import java.time.LocalDateTime;
 
-@Getter
-@Setter
-@ToString
+@Data
 public class User {
     private Integer id;
     private String username, password, email;
